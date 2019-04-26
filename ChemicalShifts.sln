@@ -1,0 +1,76 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.202
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Aplication", "0 - Aplication", "{E2545492-DB0F-4C09-AB1A-3AAF173B8452}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Infra", "3 - Infra", "{930773DB-3530-4299-914B-FFBD5ACCC698}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Services", "2 - Services", "{10FFC576-9D57-494E-9A5F-61BA4D3DC99E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Domain", "1 - Domain", "{D5665D68-1CA4-4369-86A5-436BA489971F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.2 - CrossCutting", "3.2 - CrossCutting", "{086728F6-2B2F-44C2-8958-E51E933C2666}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.1 - Data", "3.1 - Data", "{09ACAE39-3782-44E9-B026-795766F2357A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChemicalShifts.Services", "..\ChemicalShifts.Services\ChemicalShifts.Services.csproj", "{83F530AE-DB2C-4A0E-9950-F45459B24F29}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChemicalShifts.Domain", "..\ChemicalShifts.Domain\ChemicalShifts.Domain.csproj", "{B0A7D0D0-7605-41E0-B88C-D2F55807A098}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0.1 - API", "0.1 - API", "{DB061B5B-32CD-4CD5-BC94-F270C2A2316A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0.1 - Client", "0.1 - Client", "{BA121398-D8FF-4197-8F1A-D7703E589A87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChemicalShifts.API", "ChemicalShifts.API\ChemicalShifts.API.csproj", "{D92A5567-45B5-4C16-A92C-F2D04D944086}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChemicalShifts.Infra.CrossCutting", "ChemicalShifts.Infra.CrossCutting\ChemicalShifts.Infra.CrossCutting.csproj", "{45D88F59-569F-4254-9F62-505724524171}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChemicalShifts.Infra.Data", "ChemicalShifts.Infra.Data\ChemicalShifts.Infra.Data.csproj", "{2A66C40F-4533-4E17-8DEA-9B3F5DE3957D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{83F530AE-DB2C-4A0E-9950-F45459B24F29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83F530AE-DB2C-4A0E-9950-F45459B24F29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83F530AE-DB2C-4A0E-9950-F45459B24F29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83F530AE-DB2C-4A0E-9950-F45459B24F29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0A7D0D0-7605-41E0-B88C-D2F55807A098}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0A7D0D0-7605-41E0-B88C-D2F55807A098}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0A7D0D0-7605-41E0-B88C-D2F55807A098}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0A7D0D0-7605-41E0-B88C-D2F55807A098}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D92A5567-45B5-4C16-A92C-F2D04D944086}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D92A5567-45B5-4C16-A92C-F2D04D944086}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D92A5567-45B5-4C16-A92C-F2D04D944086}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D92A5567-45B5-4C16-A92C-F2D04D944086}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45D88F59-569F-4254-9F62-505724524171}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45D88F59-569F-4254-9F62-505724524171}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45D88F59-569F-4254-9F62-505724524171}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45D88F59-569F-4254-9F62-505724524171}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A66C40F-4533-4E17-8DEA-9B3F5DE3957D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A66C40F-4533-4E17-8DEA-9B3F5DE3957D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A66C40F-4533-4E17-8DEA-9B3F5DE3957D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A66C40F-4533-4E17-8DEA-9B3F5DE3957D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{086728F6-2B2F-44C2-8958-E51E933C2666} = {930773DB-3530-4299-914B-FFBD5ACCC698}
+		{09ACAE39-3782-44E9-B026-795766F2357A} = {930773DB-3530-4299-914B-FFBD5ACCC698}
+		{83F530AE-DB2C-4A0E-9950-F45459B24F29} = {10FFC576-9D57-494E-9A5F-61BA4D3DC99E}
+		{B0A7D0D0-7605-41E0-B88C-D2F55807A098} = {D5665D68-1CA4-4369-86A5-436BA489971F}
+		{DB061B5B-32CD-4CD5-BC94-F270C2A2316A} = {E2545492-DB0F-4C09-AB1A-3AAF173B8452}
+		{BA121398-D8FF-4197-8F1A-D7703E589A87} = {E2545492-DB0F-4C09-AB1A-3AAF173B8452}
+		{D92A5567-45B5-4C16-A92C-F2D04D944086} = {DB061B5B-32CD-4CD5-BC94-F270C2A2316A}
+		{45D88F59-569F-4254-9F62-505724524171} = {086728F6-2B2F-44C2-8958-E51E933C2666}
+		{2A66C40F-4533-4E17-8DEA-9B3F5DE3957D} = {09ACAE39-3782-44E9-B026-795766F2357A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C01D476D-9B03-41F3-8CB2-B9FA1B00EC9F}
+	EndGlobalSection
+EndGlobal
