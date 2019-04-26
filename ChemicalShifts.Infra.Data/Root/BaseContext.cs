@@ -12,6 +12,16 @@ namespace ChemicalShifts.Infra.Data.Root
     {
         public DbSet<User> User { get; set; }
 
+        public BaseContext() : base()
+        {
+            Database.EnsureCreated();
+        }
+
+        public BaseContext(DbContextOptions<BaseContext> options) : base(options)
+        {
+
+        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
