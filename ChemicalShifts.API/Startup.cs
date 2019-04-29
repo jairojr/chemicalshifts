@@ -13,29 +13,66 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace ChemicalShifts.API
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class Startup
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="configuration"></param>
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="services"></param>
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             services.AddDbContext<BaseContext>(options => options.UseMySql(Configuration.GetConnectionString("DB")), ServiceLifetime.Scoped);
 
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1",
+                    new Info
+                    {
+                        Title = "CHemical Shifts API",
+                        Version = "v1",
+                        Description = "Rest API for CHemical Shifts",
+                        Contact = new Contact
+                        {
+                            Name = "Jairo Jr",
+                            Url = "https://www.linkedin.com/in/jairossjr/",
+                        }
+                    });
+
+                c.IncludeXmlComments($"{System.AppDomain.CurrentDomain.BaseDirectory}ChemicalShifts.API.xml");
+            });
+
             services.AddSingleton(new AutoMapperConfig());
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="app"></param>
+        /// <param name="env"></param>
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
@@ -51,6 +88,13 @@ namespace ChemicalShifts.API
 
             app.UseHttpsRedirection();
             app.UseMvc();
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json",
+                    "ChemicalShifts API");
+            });
         }
     }
 }
