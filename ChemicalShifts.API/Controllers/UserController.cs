@@ -11,11 +11,10 @@ using System;
 /// <summary>
 /// 
 /// </summary>
-[Produces("application/json")]
-[Route("api/Usuario")]
+    [Produces("application/json")]
 public class UserController : BaseController
 {
-    private BaseService<User> _service;
+    private UserService _service;
 
     /// <summary>
     /// 
@@ -25,7 +24,7 @@ public class UserController : BaseController
     /// <param name="iConfiguration"></param>
     public UserController(BaseContext baseContext, IMapper mapper, IConfiguration iConfiguration) : base(baseContext, mapper, iConfiguration)
     {
-        _service = new BaseService<User>(baseContext);
+        _service = new UserService(baseContext);
     }
 
     /// <summary>

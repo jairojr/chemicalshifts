@@ -46,13 +46,12 @@ namespace ChemicalShifts.API
 
             services.AddDbContext<BaseContext>(options => options.UseMySql(Configuration.GetConnectionString("DB")), ServiceLifetime.Scoped);
 
-
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1",
                     new Info
                     {
-                        Title = "CHemical Shifts API",
+                        Title = "Chemical Shifts API",
                         Version = "v1",
                         Description = "Rest API for CHemical Shifts",
                         Contact = new Contact
@@ -65,7 +64,7 @@ namespace ChemicalShifts.API
                 c.IncludeXmlComments($"{System.AppDomain.CurrentDomain.BaseDirectory}ChemicalShifts.API.xml");
             });
 
-            services.AddSingleton(new AutoMapperConfig());
+            services.AddSingleton(new AutoMapperConfig().Mapper);
         }
 
         /// <summary>
@@ -92,9 +91,9 @@ namespace ChemicalShifts.API
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json",
-                    "ChemicalShifts API");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "ChemicalShifts API");
             });
+
         }
     }
 }

@@ -8,19 +8,15 @@ namespace ChemicalShifts.API.ViewModel
     /// <summary>
     /// 
     /// </summary>
-    public class BaseViewModel
+    public class MonosaccharideUnitViewModel : BaseViewModel
     {
         /// <summary>
         /// 
         /// </summary>
-        public virtual int Id { get; set; }
+        public string Name { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public virtual DateTime Created { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public virtual DateTime Altered { get; set; }
+        public string Formula { get; set; }
     }
 }

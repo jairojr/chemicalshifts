@@ -8,12 +8,24 @@ using System.Threading.Tasks;
 
 namespace ChemicalShifts.API.AutoMapper
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class DomainToViewModelMappingProfile : Profile
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public override string ProfileName => "DomainToViewModelMappings";
 
+        /// <summary>
+        /// 
+        /// </summary>
         private Action<IMapperConfigurationExpression> _expression { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public Action<IMapperConfigurationExpression> Expression
         {
             get
@@ -21,6 +33,10 @@ namespace ChemicalShifts.API.AutoMapper
                 return this._expression;
             }
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public DomainToViewModelMappingProfile()
         {
             _expression = (cfg =>

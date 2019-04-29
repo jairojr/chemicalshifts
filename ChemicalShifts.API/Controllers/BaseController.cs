@@ -7,6 +7,10 @@ using Microsoft.Extensions.Configuration;
 
 namespace ChemicalShifts.API.Controllers
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
     public class BaseController : Controller
@@ -16,6 +20,9 @@ namespace ChemicalShifts.API.Controllers
         /// </summary>
         public BaseContext _baseContext { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public IMapper _mapper { get; set; }
 
         /// <summary>
@@ -23,6 +30,12 @@ namespace ChemicalShifts.API.Controllers
         /// </summary>
         public IConfiguration _iConfiguration { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="baseContext"></param>
+        /// <param name="mapper"></param>
+        /// <param name="iConfiguration"></param>
         public BaseController(BaseContext baseContext, IMapper mapper, IConfiguration iConfiguration)
         {
             _baseContext = baseContext;

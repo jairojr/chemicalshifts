@@ -6,18 +6,19 @@ using System.Threading.Tasks;
 
 namespace ChemicalShifts.API.AutoMapper
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class AutoMapperConfig
     {
-        private IMapper _mapper;
+        /// <summary>
+        /// 
+        /// </summary>
+        public IMapper Mapper { get; }
 
-        public IMapper Mapper
-        {
-            get
-            {
-                return this._mapper;
-            }
-        }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public AutoMapperConfig()
         {
             var config = new MapperConfiguration(c =>
@@ -26,7 +27,7 @@ namespace ChemicalShifts.API.AutoMapper
                 c.AddProfile<ViewModelToDomainMappingProfile>();
             });
 
-            this._mapper = config.CreateMapper();
+            this.Mapper = config.CreateMapper();
         }
     }
 }

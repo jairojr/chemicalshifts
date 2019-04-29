@@ -10,7 +10,10 @@ namespace ChemicalShifts.Infra.Data.Root
 {
     public class BaseContext : DbContext
     {
-        public DbSet<User> User { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<AcademicArticle> AcademicArticles { get; set; }
+        public DbSet<ChemicalShift> ChemicalShifts { get; set; }
+        public DbSet<MonosaccharideUnit> MonosaccharideUnits { get; set; }
 
         public BaseContext() : base()
         {
@@ -27,6 +30,9 @@ namespace ChemicalShifts.Infra.Data.Root
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<User>(new UserConfig().Configure);
+            modelBuilder.Entity<AcademicArticle>(new AcademicArticleConfig().Configure);
+            modelBuilder.Entity<ChemicalShift>(new ChemicalShiftConfig().Configure);
+            modelBuilder.Entity<MonosaccharideUnit>(new MonosaccharideUnitConfig().Configure);
         }
 
         public override int SaveChanges()
